@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrier Onboarding Packet | Hawkinson Freight LLC</title>
+<meta name="description" content="Complete the Hawkinson Freight LLC carrier onboarding packet: authority, insurance, W-9, payment setup, and broker-carrier agreement.">
+<meta name="theme-color" content="#1D1160">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 112 100'%3E%3Crect width='112' height='100' rx='20' fill='%231D1160'/%3E%3Cg fill='%23F2F4F5'%3E%3Crect x='24' y='22' width='16' height='56'/%3E%3Crect x='72' y='22' width='16' height='56'/%3E%3C/g%3E%3Crect x='40' y='42' width='48' height='16' fill='%2300A5BF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@96,500;96,600;112,700;114,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="https://hawkinsonfreight.com/">
+      <svg viewBox="0 0 112 100" aria-hidden="true">
+        <defs><clipPath id="hclip"><path d="M4 4 H26 V40 H74 V4 H96 V96 H74 V60 H26 V96 H4 Z"/></clipPath></defs>
+        <g clip-path="url(#hclip)">
+          <rect x="0" y="4" width="100" height="10" fill="#F2F4F5"/>
+          <rect x="0" y="19" width="100" height="10" fill="#F2F4F5"/>
+          <rect x="0" y="34" width="100" height="10" fill="#F2F4F5"/>
+          <rect x="0" y="56" width="100" height="10" fill="#F2F4F5"/>
+          <rect x="0" y="71" width="100" height="10" fill="#F2F4F5"/>
+          <rect x="0" y="86" width="100" height="10" fill="#F2F4F5"/>
+        </g>
+        <rect x="26" y="45" width="48" height="10" fill="#E0E5E7"/>
+        <rect x="38" y="45" width="72" height="10" fill="#00A5BF"/>
+      </svg>
+      <span class="word">HAWKINSON <b>FREIGHT</b></span>
+    </a>
+    <div class="top-meta">Carrier Onboarding Packet<br>USDOT 9527567 · MC-58125397</div>
+  </div>
+</header>
+<div class="wrap">
+  <nav class="steps" id="steps" aria-label="Packet steps"></nav>
+  <form class="card" id="packet" novalidate>
+    <div class="progress"><div class="bar" id="bar"></div></div>
+    <section class="panel step-panel" data-step="0">
+      <h1>Set up with Hawkinson Freight LLC</h1>
+      <p class="lead">This is the official carrier onboarding packet. Complete each section, upload your documents, and e-sign the broker-carrier agreement. Most carriers finish in about 8–12 minutes.</p>
+      <div class="banner">Packets go to dispatch at <strong>joe@hawkinsonfreight.com</strong>. Questions: <strong>980-210-4359</strong> · 515 Comfort Way, Locust, NC 28097.</div>
+      <div class="req">
+        <div><b>1. Active authority</b>Valid MC / USDOT, not out of service</div>
+        <div><b>2. Certificate of insurance</b>Name Hawkinson Freight LLC as certificate holder</div>
+        <div><b>3. Signed W-9</b>Legal name must match FMCSA authority</div>
+        <div><b>4. Signed agreement</b>Broker-carrier contract + payment setup</div>
+      </div>
+      <div class="row"><button type="button" class="btn btn-teal" data-next>Start packet</button></div>
+      <p class="foot">Hawkinson Freight LLC is a licensed property broker (except household goods) with a $75,000 BMC-84 surety bond. This packet is for motor carriers only.</p>
+    </section>
+    <section class="panel step-panel hidden" data-step="1">
+      <h1>Authority & identity</h1>
+      <p class="lead">Enter the numbers exactly as they appear on your FMCSA record.</p>
+      <div class="grid">
+        <div><label>USDOT number *</label><input name="usdot" required inputmode="numeric"></div>
+        <div><label>MC number *</label><input name="mc" required placeholder="MC-123456"></div>
+        <div class="full"><label>Legal name on authority *</label><input name="legal_name" required></div>
+        <div><label>DBA / operating name</label><input name="dba"></div>
+        <div><label>Entity type *</label><select name="entity" required><option value="">Select</option><option>LLC</option><option>Corporation</option><option>Partnership</option><option>Sole proprietorship</option><option>Other</option></select></div>
+        <div><label>Year authority granted</label><input name="authority_year"></div>
+        <div><label>SCAC</label><input name="scac" maxlength="4"></div>
+        <div class="full"><label>Physical address *</label><input name="address" required></div>
+        <div><label>City *</label><input name="city" required></div>
+        <div><label>State *</label><input name="state" required maxlength="2"></div>
+        <div><label>ZIP *</label><input name="zip" required></div>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-ghost" id="saferBtn">Open FMCSA SAFER</button>
+        <button type="button" class="btn btn-ghost" data-prev>Back</button>
+        <button type="button" class="btn btn-teal" data-next>Continue</button>
+      </div>
+    </section>
+    <section class="panel step-panel hidden" data-step="2">
+      <h1>Contacts</h1>
+      <div class="grid">
+        <div class="full"><strong style="color:var(--purple)">Authorized representative</strong></div>
+        <div><label>Full name *</label><input name="rep_name" required></div>
+        <div><label>Title *</label><input name="rep_title" required></div>
+        <div><label>Email *</label><input type="email" name="rep_email" required></div>
+        <div><label>Mobile *</label><input name="rep_phone" required></div>
+        <div class="full"><strong style="color:var(--purple)">Dispatch</strong></div>
+        <div><label>Dispatch name *</label><input name="dispatch_name" required></div>
+        <div><label>Dispatch phone *</label><input name="dispatch_phone" required></div>
+        <div><label>Dispatch email *</label><input type="email" name="dispatch_email" required></div>
+        <div><label>After-hours phone *</label><input name="after_hours" required></div>
+        <div class="full"><strong style="color:var(--purple)">Billing / claims</strong></div>
+        <div><label>Billing name *</label><input name="billing_name" required></div>
+        <div><label>Billing email *</label><input type="email" name="billing_email" required></div>
+        <div><label>Claims contact</label><input name="claims_name"></div>
+        <div><label>Claims email / phone</label><input name="claims_contact"></div>
+      </div>
+      <div class="row"><button type="button" class="btn btn-ghost" data-prev>Back</button><button type="button" class="btn btn-teal" data-next>Continue</button></div>
+    </section>
+    <section class="panel step-panel hidden" data-step="3">
+      <h1>Equipment, lanes & operations</h1>
+      <label>Equipment *</label>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" name="equipment" value="Dry van">Dry van</label>
+        <label class="chip"><input type="checkbox" name="equipment" value="Reefer">Reefer</label>
+        <label class="chip"><input type="checkbox" name="equipment" value="Flatbed">Flatbed</label>
+        <label class="chip"><input type="checkbox" name="equipment" value="Step deck">Step deck</label>
+        <label class="chip"><input type="checkbox" name="equipment" value="Hotshot">Hotshot</label>
+        <label class="chip"><input type="checkbox" name="equipment" value="Box truck">Box truck</label>
+        <label class="chip"><input type="checkbox" name="equipment" value="Power only">Power only</label>
+        <label class="chip"><input type="checkbox" name="equipment" value="Tanker">Tanker</label>
+        <label class="chip"><input type="checkbox" name="equipment" value="Drayage">Drayage</label>
+      </div>
+      <div class="grid" style="margin-top:16px">
+        <div><label>Power units *</label><input name="trucks" required inputmode="numeric"></div>
+        <div><label>Trailers</label><input name="trailers" inputmode="numeric"></div>
+        <div><label>Team service</label><select name="teams"><option>No</option><option>Yes</option></select></div>
+        <div><label>Tracking *</label><select name="tracking" required><option value="">Select</option><option>ELD / GPS — shareable link</option><option>MacroPoint / FourKites / project44</option><option>Check calls only</option></select></div>
+        <div class="full"><label>Preferred lanes *</label><textarea name="lanes" rows="3" required></textarea></div>
+        <div class="full"><label>Restricted freight</label><textarea name="restrictions" rows="2"></textarea></div>
+      </div>
+      <div class="row"><button type="button" class="btn btn-ghost" data-prev>Back</button><button type="button" class="btn btn-teal" data-next>Continue</button></div>
+    </section>
+    <section class="panel step-panel hidden" data-step="4">
+      <h1>Insurance</h1>
+      <p class="lead">Certificate holder must read exactly: <strong>Hawkinson Freight LLC, 515 Comfort Way, Locust, NC 28097</strong>.</p>
+      <div class="banner">Minimums: Auto liability $1,000,000 · Cargo $100,000 · General liability $1,000,000.</div>
+      <div class="grid">
+        <div><label>Auto liability limit *</label><input name="al_limit" required placeholder="$1,000,000"></div>
+        <div><label>Auto liability expiration *</label><input type="date" name="al_exp" required></div>
+        <div><label>Cargo limit *</label><input name="cargo_limit" required placeholder="$100,000"></div>
+        <div><label>Cargo expiration *</label><input type="date" name="cargo_exp" required></div>
+        <div><label>General liability limit</label><input name="gl_limit"></div>
+        <div><label>Insurance producer *</label><input name="producer" required></div>
+        <div class="full"><label>Producer phone / email *</label><input name="producer_contact" required></div>
+      </div>
+      <label class="check"><input type="checkbox" name="coi_holder" value="yes" required> I will have my agent issue a current COI naming Hawkinson Freight LLC as certificate holder.</label>
+      <div class="row"><button type="button" class="btn btn-ghost" data-prev>Back</button><button type="button" class="btn btn-teal" data-next>Continue</button></div>
+    </section>
+    <section class="panel step-panel hidden" data-step="5">
+      <h1>W-9 & payment</h1>
+      <p class="lead">Standard terms are Net 30 from a clean invoice, rate confirmation, and POD. Quick pay is available — ask dispatch when you book.</p>
+      <div class="grid">
+        <div><label>Tax ID type *</label><select name="tax_type" required><option value="">Select</option><option>EIN</option><option>SSN</option></select></div>
+        <div><label>EIN / SSN *</label><input name="tin" required autocomplete="off"></div>
+        <div><label>How should we pay you? *</label><select name="pay_method" required><option value="">Select</option><option>Direct deposit / ACH to carrier</option><option>Factoring company</option><option>Check by mail</option></select></div>
+        <div><label>Factoring company</label><input name="factor_name"></div>
+        <div class="full"><label>Remit-to name / address *</label><input name="remit" required></div>
+        <div><label>Bank name</label><input name="bank_name"></div>
+        <div><label>Routing number</label><input name="routing"></div>
+        <div class="full"><label>Account number</label><input name="account" autocomplete="off"></div>
+      </div>
+      <div class="banner warn">We confirm banking and factoring by call-back before the first payment.</div>
+      <div class="row"><button type="button" class="btn btn-ghost" data-prev>Back</button><button type="button" class="btn btn-teal" data-next>Continue</button></div>
+    </section>
+    <section class="panel step-panel hidden" data-step="6">
+      <h1>Documents</h1>
+      <div class="grid">
+        <div class="file full"><label>Signed W-9 *</label><input type="file" name="w9" accept=".pdf,.png,.jpg,.jpeg" required></div>
+        <div class="file full"><label>Certificate of insurance *</label><input type="file" name="coi" accept=".pdf,.png,.jpg,.jpeg" required></div>
+        <div class="file full"><label>Authority / MC certificate</label><input type="file" name="authority_doc" accept=".pdf,.png,.jpg,.jpeg"></div>
+        <div class="file full"><label>Notice of assignment / voided check</label><input type="file" name="pay_doc" accept=".pdf,.png,.jpg,.jpeg"></div>
+      </div>
+      <div class="row"><button type="button" class="btn btn-ghost" data-prev>Back</button><button type="button" class="btn btn-teal" data-next>Continue</button></div>
+    </section>
+    <section class="panel step-panel hidden" data-step="7">
+      <h1>Broker-carrier agreement</h1>
+      <div class="agree">
+        <p><strong>BROKER-CARRIER TRANSPORTATION AGREEMENT</strong><br>Hawkinson Freight LLC (“Broker”), USDOT 9527567, MC-58125397, 515 Comfort Way, Locust, NC 28097, and the motor carrier identified in this packet (“Carrier”).</p>
+        <h3>1. Relationship</h3><p>Broker is a licensed property broker. Carrier is an independent contractor with active FMCSA authority. This Agreement does not create a partnership or employment relationship. Carrier is responsible for drivers, equipment, taxes, and operating expenses.</p>
+        <h3>2. Services</h3><p>Each shipment is governed by Broker’s written rate confirmation, the bill of lading, and this Agreement. The rate confirmation controls rate and accessorials. Carrier shall transport with reasonable dispatch and provide tracking or check calls as specified.</p>
+        <h3>3. No double brokerage</h3><p>Carrier shall haul on its own authority and equipment. Carrier shall not re-broker, co-broker, trip-lease, or subcontract a Hawkinson Freight load without prior written consent. Violation is material default. Carrier remains liable for the shipment.</p>
+        <h3>4. Rates and payment</h3><p>Unless the rate confirmation states otherwise, payment is Net 30 from Broker’s receipt of a clean invoice, signed rate confirmation, and signed POD/BOL. Quick-pay terms, if offered, are confirmed in writing per load. Offset is permitted for cargo claims, overpayments, and unearned advances.</p>
+        <h3>5. Cargo liability</h3><p>Carrier’s cargo liability is that of a motor carrier under 49 U.S.C. § 14706 (Carmack) unless Broker agrees otherwise in writing.</p>
+        <h3>6. Insurance</h3><p>Carrier shall maintain Auto Liability of at least $1,000,000, Motor Truck Cargo of at least $100,000, General Liability of at least $1,000,000 where commercially available, and workers’ compensation as required by law. Certificate holder: Hawkinson Freight LLC, 515 Comfort Way, Locust, NC 28097. Thirty days’ cancellation notice required.</p>
+        <h3>7. Claims</h3><p>Cargo claims follow 49 C.F.R. Part 370. Carrier shall not withhold delivery to force settlement. Accessorials must be pre-approved or documented per the rate confirmation.</p>
+        <h3>8. Indemnity</h3><p>Carrier shall defend and indemnify Broker and its customers from claims arising out of Carrier’s transportation, equipment, drivers, or breach, except to the extent caused by Broker’s gross negligence or willful misconduct.</p>
+        <h3>9. Compliance</h3><p>Carrier warrants active authority, no out-of-service order, and compliance with FMCSA/DOT rules. Carrier shall not haul Broker freight under an Unsatisfactory safety rating.</p>
+        <h3>10. Back-solicitation</h3><p>During this Agreement and for 12 months after, Carrier shall not solicit freight from a shipper first introduced by Broker on lanes Broker tendered, except freight Carrier already moved for that customer before this Agreement.</p>
+        <h3>11. Term and law</h3><p>Either party may end this Agreement by written notice. Surviving terms include payment, claims, indemnity, insurance, and non-solicitation. North Carolina law governs. Venue: Stanly or Mecklenburg County, North Carolina, unless federal jurisdiction applies. E-signatures are valid under E-SIGN and North Carolina UETA.</p>
+        <p><em>Operational contract template. Have counsel review before signing if you wish.</em></p>
+      </div>
+      <label class="check"><input type="checkbox" id="c1" required> I am authorized to bind the Carrier named in this packet.</label>
+      <label class="check"><input type="checkbox" id="c2" required> I have read the Broker-Carrier Agreement and agree to its terms.</label>
+      <label class="check"><input type="checkbox" id="c3" required> All information and documents submitted are true and complete.</label>
+      <label class="check"><input type="checkbox" id="c4" required> I will not double-broker Hawkinson Freight loads.</label>
+      <div class="grid" style="margin-top:8px">
+        <div><label>Signer name *</label><input name="sign_name" required></div>
+        <div><label>Signer title *</label><input name="sign_title" required></div>
+        <div class="full"><label>Draw signature *</label><div class="sign-box"><canvas id="sig" width="800" height="160"></canvas></div>
+          <button type="button" class="btn btn-ghost" id="clearSig" style="margin-top:8px">Clear signature</button></div>
+      </div>
+      <input type="hidden" name="signature_data" id="signature_data">
+      <input type="hidden" name="signed_at" id="signed_at">
+      <input type="hidden" name="_subject" value="New carrier packet — Hawkinson Freight">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="packet_for" value="Hawkinson Freight LLC">
+      <div class="row">
+        <button type="button" class="btn btn-ghost" data-prev>Back</button>
+        <button type="submit" class="btn btn-purple" id="submitBtn">Sign and submit packet</button>
+      </div>
+    </section>
+    <section class="panel step-panel hidden" data-step="8">
+      <div class="banner ok"><strong>Packet submitted.</strong> Dispatch will review authority, insurance, and the signed agreement before the first load.</div>
+      <h1>You’re in review.</h1>
+      <div class="banner">Certificate holder:<br><strong>Hawkinson Freight LLC</strong><br>515 Comfort Way<br>Locust, NC 28097<br>980-210-4359 · joe@hawkinsonfreight.com</div>
+      <div class="row">
+        <a class="btn btn-teal" href="https://hawkinsonfreight.com/">Back to Hawkinson Freight</a>
+        <button type="button" class="btn btn-ghost" id="printBtn">Print / save summary</button>
+      </div>
+    </section>
+  </form>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
